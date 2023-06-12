@@ -1,0 +1,53 @@
+﻿@model FrmCentral.Models.Farmer
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Farmer</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FmrId" class="control-label"></label>
+                <input asp-for="FmrId" class="form-control" />
+                <span asp-validation-for="FmrId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FmrName" class="control-label"></label>
+                <input asp-for="FmrName" class="form-control" />
+                <span asp-validation-for="FmrName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FmrSurname" class="control-label"></label>
+                <input asp-for="FmrSurname" class="form-control" />
+                <span asp-validation-for="FmrSurname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FmrUsername" class="control-label"></label>
+                <input asp-for="FmrUsername" class="form-control" />
+                <span asp-validation-for="FmrUsername" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FmrPassword" class="control-label"></label>
+                <input asp-for="FmrPassword" class="form-control" />
+                <span asp-validation-for="FmrPassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
